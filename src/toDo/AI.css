@@ -1,0 +1,104 @@
+/* Page générale */
+.ai-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+  min-height: 100vh;
+  background: url("./backgroundA.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Conteneur du chatbot */
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 80%;
+  height: 500px;
+  border-radius: 15px;
+  background: #f7edeb; /* blanc cassé / feuille */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Zone des messages */
+.chatbox {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 8px;
+}
+
+/* Messages utilisateur */
+.user-msg {
+  background: #3AA5F7; /* bleu clair */
+  color: white;
+  padding: 10px 14px;
+  border-radius: 20px 20px 0 20px; /* style bulle WhatsApp */
+  margin: 5px 0;
+  align-self: flex-end;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Messages bot */
+.bot-msg {
+  background: #4A2C92; /* violet profond */
+  color: white;
+  padding: 10px 14px;
+  border-radius: 20px 20px 20px 0; /* style bulle WhatsApp */
+  margin: 5px 0;
+  align-self: flex-start;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Input + bouton */
+.chat-input {
+  display: flex;
+  padding: 12px;
+  background: #ffffff; /* blanc */
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #C83FAF; /* magenta */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.chat-input button:hover:not(:disabled) {
+  background: #F25C4A; /* orange rougeâtre */
+}
+
+.chat-input button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

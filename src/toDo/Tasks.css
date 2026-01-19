@@ -1,0 +1,100 @@
+/* Tasks.css */
+
+/* Background général */
+body {
+  background: url("./backgroundA.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page globale */
+.tasks-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 25px;
+  color: #1a1a1a;
+  background-color: #F7EDEB; /* Blanc cassé / crème */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre principal */
+.tasks-page h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #4A2C92; /* Violet profond */
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Section catégorie */
+.category-section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border-left: 6px solid #C83FAF; /* Magenta / rose violacé */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Titre de catégorie */
+.category-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2E4FCF; /* Bleu moyen */
+  border-bottom: 2px solid #C83FAF; /* Magenta / rose violacé */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Liste des tâches */
+.category-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tâches individuelles */
+.category-section li {
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background-color: #F7EDEB; /* Blanc cassé */
+  border-left: 4px solid #3AA5F7; /* Bleu clair / cyan */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, border-left-color 0.2s;
+}
+
+/* Survol des tâches */
+.category-section li:hover {
+  background-color: #e8e0f7; /* léger violet clair */
+  transform: translateX(5px);
+  border-left-color: #F25C4A; /* Orange rougeâtre */
+}
+
+/* Tâches complétées */
+.category-section li.done {
+  text-decoration: line-through;
+  color: #888;
+  border-left-color: #1C2D73; /* Bleu foncé */
+  background-color: #dfe7f7; /* fond légèrement bleu clair */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tasks-page {
+    padding: 15px;
+  }
+  .category-section h2 {
+    font-size: 1.3rem;
+  }
+  .category-section li {
+    padding: 12px;
+  }
+}
